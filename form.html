@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form</title>
+	<link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" /> 
+
+<style>.bootstrap-iso .formden_header h2, .bootstrap-iso .formden_header p, .bootstrap-iso form{font-family: Arial, Helvetica, sans-serif; color: black;}.bootstrap-iso form button, .bootstrap-iso form button:hover{color: white !important;} .asteriskField{color: red;}</style>
+</head>
+<body>
+
+
+<div class="bootstrap-iso">
+<div style="background-color: #fcfcfc">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-6 col-sm-6 col-xs-12" style="margin-left: 22%; margin-right: 32.5%; margin-top: 10%; border: solid grey 5px; border-radius: 10px;padding-top: 20px;padding-bottom: 15px" >
+    
+    <form method="post" onsubmit="return validateForm();">
+     <div class="form-group ">
+      <label class="control-label requiredField" for="name">
+       Name
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" pattern="[a-z A-Z]*" id="name" name="name" type="text" required/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="email">
+       Email
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" placeholder="abc@xy.com" id="email" name="email" type="email" required/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label requiredField" for="Username">
+       Username
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="username" name="Username" placeholder="Enter username " type="Username" required="required" />
+     </div>
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="pwd">
+       Password
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="pwd" name="pwd" placeholder="Enter password " type="password" required="required" onkeyup="check();"/>
+     </div>
+
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="cnfpwd">
+       Confirm Password
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" id="cnfpwd" name="cnfpwd" placeholder="Re-Enter password " type="password" required="required" onkeyup='check();' /> 
+        <span id='message'/> </span>
+     </div>
+
+
+     <div class="form-group ">
+      <label class="control-label requiredField" for="tel">
+       Mobile number
+       <span class="asteriskField">
+        *
+       </span>
+      </label>
+      <input class="form-control" placeholder="enter 10 digit pattern" pattern="[1-9]{1}[0-9]{9}" id="tel" name="tel" type="text" required/>
+     </div>
+     <div class="form-group ">
+      <label class="control-label " for="date">
+       Date of Birth
+      </label>
+      <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="date"/>
+     </div>
+     <div class="form-group" id="div_radio">
+      <label class="control-label " for="radio">
+       Gender
+      </label>
+      <div class="">
+       <label class="radio-inline">
+        <input name="radio" type="radio" value="Female"/>
+        Female
+       </label>
+       <label class="radio-inline">
+        <input name="radio" type="radio" value="Male"/>
+        Male
+       </label>
+      </div>
+     </div>
+     <div class="form-group">
+      <div>
+       <button class="btn btn-primary " name="submit" type="submit">
+        Submit
+       </button>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+
+<script type="text/javascript">
+  function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+  }
+  var check = function() {
+  if (document.getElementById('pwd').value.length != 0){
+
+        if (document.getElementById('pwd').value == document.getElementById('cnfpwd').value)
+              {
+          document.getElementById('message').style.color = "green";
+          document.getElementById('message').innerHTML = "Password are matching";
+              }
+        else {
+          document.getElementById('message').style.color = "red";
+          document.getElementById('message').innerHTML = "Passwords are not matching";
+             }
+                                }
+  else{
+        document.getElementById('message').innerHTML = "";
+      }
+                          }
+
+
+</script>
+</body>
+</html>

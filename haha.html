@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>form></title>
+</head>
+<body>
+<h1>Register</h1>
+<form onsubmit="myFunction()">
+	<div>
+		<label>Username: <input type="text" id="username" required /></label>
+	</div>
+		<div>
+		<label>Password: <input type="password" id="password" required /></label>
+	</div>
+	<div>
+		<label>First Name: <input type="text" id="name1" required /></label>
+		<label>Middle Name: <input type="text" id="name2"/></label>
+		<label>Last Name: <input type="text" id="name3" required /></label>
+	</div>
+	<div id="gender">
+		Gender: <label>Male <input name="gender" type="radio" value="Male"></label>
+		<label>Female <input name="gender" type="radio" value="Female"></label>
+	</div>
+	<div>
+		<label>Date of Birth: <input type="text" placeholder="DD/MM/YY" id="dob"></label>
+	</div>
+	<div>
+		<label for="country">Country: </label>
+		<select id="country">
+			<option value="India">India</option>
+			<option value="Pakistan">Pakistan</option>
+			<option value="Nepal">Nepal</option>
+			<optio value="Bangladesh">Bangladesh</option>
+			<option value="Sri Lanka">Sri Lanka</option>
+			<option value="Bhutan">Bhutan</option>
+			<option value="Afghanistan">Afghanistan</option>
+		</select>
+	</div>
+	<div>
+		<label>City: <input type="text" id="city" required /></label>
+		<label>Address: <input type="text" id="address" required /></label>
+	</div>
+	<div>
+		<label>Mobile: <input type="text" id="mobile" required /></label>
+	</div>
+	<button action="bio.html">Submit</button>
+</form>
+<script type="text/javascript"></script>
+</body>
+</html>
+
+
+

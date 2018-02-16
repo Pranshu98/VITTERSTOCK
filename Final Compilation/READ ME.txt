@@ -1,0 +1,12 @@
+----------How to start the server------------------------
+
+1) Start MongoDB Server
+2) Go to CMD
+3) Navigate to "Final Web" folder location
+4) Type "nodemon" or "npm start" (without quotes)
+5) Then open your web browser
+6) In address bar, type "localhost:3002" (without quotes)
+
+---------------------------------------------------------
+
+ Made By Ekansh Gayakwad, Manas Dange and Pranshu Pranjal
